@@ -25,6 +25,6 @@ app.get('/.well-known/jwks.json', (req, res) => {
     res.json(jwks);
 });
 
-app.listen(3000, () => {
-    console.log('JWKS endpoint is running on http://localhost:3000/.well-known/jwks.json');
-});
+app.listen(3000, "0.0.0.0", () =>
+  console.log('JWKS endpoint is running on http://localhost:3000/.well-known/jwks.json')
+);
